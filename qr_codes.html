@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siddhi's Songs - QR Code Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0f181c;
+      color: #e4ecf0;
+      min-height: 100vh;
+      padding: 30px 20px 60px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      color: #8da4b0;
+      font-size: 15px;
+    }
+
+    .actions-bar {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #1ed760;
+      color: #0b1317;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #23f06c;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .song-card {
+      background: #18262d;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .song-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-preview {
+      width: 100%;
+      background: #000;
+      text-align: center;
+    }
+
+    .card-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-body {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .card-artist {
+      font-size: 13.5px;
+      color: #8fa6b2;
+      margin-bottom: 16px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .card-actions a {
+      flex: 1;
+      text-align: center;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .btn-test {
+      background: #1ed760;
+      color: #0b1317;
+    }
+
+    .btn-download {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        color: #000000;
+        padding: 0;
+      }
+      .actions-bar, header p {
+        display: none;
+      }
+      .song-card {
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+        box-shadow: none;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎵 Siddhi's Song QR Cards 🎵</h1>
+      <p class="subtitle">Scannable from any phone camera, anywhere, anytime without any special app or setup.</p>
+      <div class="actions-bar">
+        <a href="index.html" class="btn" target="_blank">▶ Open Music Player</a>
+        <button class="btn btn-secondary" onclick="window.print()">🖨 Print QR Cards</button>
+      </div>
+    </header>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <div class="song-card">
+        <div class="card-preview">
+          <img src="qr_codes/ajab_si_card.png" alt="Aankhon Mein Teri QR Card">
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-title">Aankhon Mein Teri (Ajab Si)</div>
+            <div class="card-artist">KK • Om Shanti Om</div>
+          </div>
+          <div class="card-actions">
+            <a href="https://yuvrajain.github.io/siddhi-songs/?song=ajab-si" target="_blank" class="btn-test">Test Link</a>
+            <a href="qr_codes/ajab_si_card.png" download class="btn-download">Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="song-card">
+        <div class="card-preview">
+          <img src="qr_codes/heeriye_card.png" alt="Heeriye QR Card">
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-title">Heeriye</div>
+            <div class="card-artist">Jasleen Royal & Arijit Singh</div>
+          </div>
+          <div class="card-actions">
+            <a href="https://yuvrajain.github.io/siddhi-songs/?song=heeriye" target="_blank" class="btn-test">Test Link</a>
+            <a href="qr_codes/heeriye_card.png" download class="btn-download">Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="song-card">
+        <div class="card-preview">
+          <img src="qr_codes/tujh_mei_rab_card.png" alt="Tujh Mein Rab Dikhta Hai QR Card">
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-title">Tujh Mein Rab Dikhta Hai</div>
+            <div class="card-artist">Roop Kumar Rathod • Salim-Sulaiman</div>
+          </div>
+          <div class="card-actions">
+            <a href="https://yuvrajain.github.io/siddhi-songs/?song=tujh-mei-rab" target="_blank" class="btn-test">Test Link</a>
+            <a href="qr_codes/tujh_mei_rab_card.png" download class="btn-download">Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="song-card">
+        <div class="card-preview">
+          <img src="qr_codes/tum_ho_toh_card.png" alt="Tum Ho Toh QR Card">
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-title">Tum Ho Toh</div>
+            <div class="card-artist">Farhan Akhtar • Rock On!!</div>
+          </div>
+          <div class="card-actions">
+            <a href="https://yuvrajain.github.io/siddhi-songs/?song=tum-ho-toh" target="_blank" class="btn-test">Test Link</a>
+            <a href="qr_codes/tum_ho_toh_card.png" download class="btn-download">Download</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="song-card">
+        <div class="card-preview">
+          <img src="qr_codes/until_i_found_you_card.png" alt="Until I Found You QR Card">
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-title">Until I Found You</div>
+            <div class="card-artist">Stephen Sanchez</div>
+          </div>
+          <div class="card-actions">
+            <a href="https://yuvrajain.github.io/siddhi-songs/?song=until-i-found-you" target="_blank" class="btn-test">Test Link</a>
+            <a href="qr_codes/until_i_found_you_card.png" download class="btn-download">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
