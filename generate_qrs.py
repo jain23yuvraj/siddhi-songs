@@ -12,8 +12,8 @@ songs = [
         "file_name": "ajab_si",
         "title": "Aankhon Mein Teri (Ajab Si)",
         "artist": "KK • Om Shanti Om",
-        "img": "ajab si.jpeg",
-        "url": "https://yuvrajain.github.io/siddhi-songs/?song=ajab-si"
+        "img": "ajab-si.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=ajab-si"
     },
     {
         "id": "heeriye",
@@ -21,31 +21,31 @@ songs = [
         "title": "Heeriye",
         "artist": "Jasleen Royal & Arijit Singh",
         "img": "heeriye.jpeg",
-        "url": "https://yuvrajain.github.io/siddhi-songs/?song=heeriye"
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=heeriye"
     },
     {
         "id": "tujh-mei-rab",
         "file_name": "tujh_mei_rab",
         "title": "Tujh Mein Rab Dikhta Hai",
         "artist": "Roop Kumar Rathod • Salim-Sulaiman",
-        "img": "tujh mei rab.jpeg",
-        "url": "https://yuvrajain.github.io/siddhi-songs/?song=tujh-mei-rab"
+        "img": "tujh-mei-rab.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=tujh-mei-rab"
     },
     {
         "id": "tum-ho-toh",
         "file_name": "tum_ho_toh",
         "title": "Tum Ho Toh",
         "artist": "Farhan Akhtar • Rock On!!",
-        "img": "tum ho toh.jpeg",
-        "url": "https://yuvrajain.github.io/siddhi-songs/?song=tum-ho-toh"
+        "img": "tum-ho-toh.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=tum-ho-toh"
     },
     {
         "id": "until-i-found-you",
         "file_name": "until_i_found_you",
         "title": "Until I Found You",
         "artist": "Stephen Sanchez",
-        "img": "until i found you.jpeg",
-        "url": "https://yuvrajain.github.io/siddhi-songs/?song=until-i-found-you"
+        "img": "until-i-found-you.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=until-i-found-you"
     }
 ]
 
@@ -82,7 +82,6 @@ for s in songs:
     
     photo_x = (card_w - 360) // 2
     photo_y = 44
-    # White border around photo
     draw.rectangle([photo_x - 3, photo_y - 3, photo_x + 360 + 2, photo_y + 360 + 2], fill="#ffffff")
     card.paste(photo_thumb, (photo_x, photo_y))
     
@@ -90,11 +89,9 @@ for s in songs:
     qr_resized = qr_img.resize((260, 260), Image.Resampling.LANCZOS)
     qr_x = (card_w - 260) // 2
     qr_y = 550
-    # White card backdrop for QR
     draw.rectangle([qr_x - 8, qr_y - 8, qr_x + 260 + 7, qr_y + 260 + 7], fill="#ffffff")
     card.paste(qr_resized, (qr_x, qr_y))
     
-    # Fonts
     try:
         font_title = ImageFont.truetype("arialbd.ttf", 25)
         font_artist = ImageFont.truetype("arial.ttf", 18)
@@ -103,15 +100,9 @@ for s in songs:
     except:
         font_title = font_artist = font_scan = font_footer = ImageFont.load_default()
         
-    # Title centered
     draw.text((card_w // 2, 436), s["title"], fill="#ffffff", font=font_title, anchor="mm")
-    # Artist centered
     draw.text((card_w // 2, 472), s["artist"], fill="#9bb0b9", font=font_artist, anchor="mm")
-    
-    # Scan prompt with music note
     draw.text((card_w // 2, 510), "SCAN TO PLAY WITH CAMERA", fill="#1ed760", font=font_scan, anchor="mm")
-    
-    # Footer tag
     draw.text((card_w // 2, 880), "Special Mix for Siddhi", fill="#738a95", font=font_footer, anchor="mm")
     draw.text((card_w // 2, 905), s["url"], fill="#4e626c", font=font_footer, anchor="mm")
     
@@ -119,4 +110,4 @@ for s in songs:
     card.save(card_path)
     print(f"Saved Printable Card: {card_path}")
 
-print("All QR codes and cards generated successfully!")
+print("All QR codes regenerated for jain23yuvraj!")
