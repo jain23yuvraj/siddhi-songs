@@ -46,6 +46,30 @@ songs = [
         "artist": "Stephen Sanchez",
         "img": "until-i-found-you.jpeg",
         "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=until-i-found-you"
+    },
+    {
+        "id": "tumhara-milna",
+        "file_name": "tumhara_milna",
+        "title": "Tumhara Milna",
+        "artist": "Arijit Singh • Tanishk Bagchi",
+        "img": "tumhara-milna.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=tumhara-milna"
+    },
+    {
+        "id": "tere-sang-yaara",
+        "file_name": "tere_sang_yaara",
+        "title": "Tere Sang Yaara",
+        "artist": "Atif Aslam • Rustom",
+        "img": "tere-sang-yaara.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=tere-sang-yaara"
+    },
+    {
+        "id": "ude-jab-jab",
+        "file_name": "ude_jab_jab",
+        "title": "Ude Jab Jab Zulfen Teri",
+        "artist": "Mohammed Rafi & Asha Bhosle • Naya Daur",
+        "img": "ude-jab-jab.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=ude-jab-jab"
     }
 ]
 
@@ -110,4 +134,4 @@ for s in songs:
     card.save(card_path)
     print(f"Saved Printable Card: {card_path}")
 
-print("All QR codes regenerated for jain23yuvraj!")
+print("All 8 QR codes generated successfully!")
