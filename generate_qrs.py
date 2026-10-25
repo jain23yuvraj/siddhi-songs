@@ -70,6 +70,22 @@ songs = [
         "artist": "Mohammed Rafi & Asha Bhosle • Naya Daur",
         "img": "ude-jab-jab.jpeg",
         "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=ude-jab-jab"
+    },
+    {
+        "id": "tu-chahiye",
+        "file_name": "tu_chahiye",
+        "title": "Tu Chahiye",
+        "artist": "Atif Aslam • Pritam",
+        "img": "tu-chahiye.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=tu-chahiye"
+    },
+    {
+        "id": "tu-na-samjhe",
+        "file_name": "tu_na_samjhe",
+        "title": "Tu Na Samjhe",
+        "artist": "Raja",
+        "img": "tu-na-samjhe.jpeg",
+        "url": "https://jain23yuvraj.github.io/siddhi-songs/?song=tu-na-samjhe"
     }
 ]
 
@@ -134,4 +150,4 @@ for s in songs:
     card.save(card_path)
     print(f"Saved Printable Card: {card_path}")
 
-print("All 8 QR codes generated successfully!")
+print("All 10 QR codes generated successfully!")
